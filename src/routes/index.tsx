@@ -44,7 +44,7 @@ function useTyping() {
   useEffect(() => {
     const roles = ["Developer", "Designer", "Creator"];
     let index = 0;
-    const interval = window.setInterval(() => { index = (index + 1) % roles.length; setRole(roles[index]); }, 2400);
+    const interval = window.setInterval(() => { index = (index + 1) % roles.length; setRole(roles[index] ?? "Developer"); }, 2400);
     return () => window.clearInterval(interval);
   }, []);
   return role;
@@ -90,7 +90,7 @@ function Portfolio() {
     <main>
       <section id="top" className="relative min-h-[720px] overflow-hidden border-b border-border pt-[76px] md:min-h-[760px] lg:min-h-[790px]">
         <div className="hero-grid pointer-events-none absolute inset-0" />
-        <div className="pointer-events-none absolute inset-y-[76px] right-[-20%] w-[115%] opacity-70 md:right-[-10%] md:w-[75%] md:opacity-95 lg:right-[-5%] lg:w-[63%]">
+        <div className="pointer-events-none absolute inset-y-[76px] right-[-20%] w-[115%] opacity-45 md:right-[-10%] md:w-[75%] md:opacity-95 lg:right-[-5%] lg:w-[63%]">
           <img src={heroArt} alt="Floating glass and chrome forms around a vibrant green sphere" width={1200} height={1400} className="hero-art h-full w-full object-cover object-center md:object-[center_43%]" />
         </div>
         <div className="pointer-events-none absolute left-[62%] top-[18%] h-12 w-12 rounded-full border border-lilac/60 float-a md:h-20 md:w-20" />
