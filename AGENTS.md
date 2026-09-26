@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep the portfolio as a single-page TanStack route with reusable presentation controls in `src/components`; this preserves the requested one-page experience while avoiding duplicated button styling.
+- Keep contact submission client-only via a mailto link; the portfolio explicitly has no backend.
